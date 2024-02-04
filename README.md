@@ -28,7 +28,7 @@ The code iterates over each sample n of the input signal z and computes the weig
 
 This implementation provides a simple and effective way to apply a moving average filter to noisy signals, smoothing out fluctuations and revealing underlying trends.
 
-## b)MATLAB Builtin 'Conv' function
+## b)MATLAB Builtin `Conv` function
 - The above code can be simplied using built in  convolution function called "conv".
 - The expression is given by just: output = conv(input(z), filter kernel (h)).
 - The MATLAB code is attached in file filterconv.m
@@ -52,7 +52,7 @@ This repository contains MATLAB code to implement a digital IIR filter using a d
     - Two sums are computed:
       - `sum_b`: The sum of the past 3 samples of the input signal multiplied by the coefficients `b`.
       - `sum_a`: The sum of the past 3 samples of the output signal multiplied by the coefficients `a`.
-    - The difference of `sum_b` and `sum_a` is assigned to the output signal `y` at sample `n`.
+    - The difference of sum_b and sum_a is assigned to the output signal `y` at sample `n`.
 - **Listening to Filtered Signal:**
   - The `soundsc` function is used to play the filtered signal, allowing users to listen to the result.
  
