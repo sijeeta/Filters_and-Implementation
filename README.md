@@ -28,7 +28,7 @@ The code iterates over each sample n of the input signal z and computes the weig
 
 This implementation provides a simple and effective way to apply a moving average filter to noisy signals, smoothing out fluctuations and revealing underlying trends.
 
-## b)MATLAB Builtin Convolution function
+## b)MATLAB Builtin 'Conv' function
 - The above code can be simplied using built in  convolution function called "conv".
 - The expression is given by just: output = conv(input(z), filter kernel (h)).
 - The MATLAB code is attached in file filterconv.m
@@ -55,6 +55,22 @@ This repository contains MATLAB code to implement a digital IIR filter using a d
     - The difference of `sum_b` and `sum_a` is assigned to the output signal `y` at sample `n`.
 - **Listening to Filtered Signal:**
   - The `soundsc` function is used to play the filtered signal, allowing users to listen to the result.
+ 
+## d) MATLAB Builtin function Filter
+
+ The `filter` function is a powerful tool for processing signals and can be used to implement various types of filters, including FIR (Finite Impulse Response) and IIR (Infinite Impulse Response) filters.
+
+## Implementation Using `filter` Function:
+- MATLAB's `filter` function allows you to implement digital filters using filter coefficients and input signals.
+- The function syntax is as follows: `output_signal = filter(b, a, input_signal)`.
+  - `b` represents the coefficients of the input signal.
+  - `a` represents the coefficients of the previous values of the output signal.
+  - `input_signal` is the original noisy signal that you want to filter.
+  - `output_signal` is the filtered signal obtained after applying the filter.
+Example:
+   load noisyMusic.mat; % Load the noisy music signal
+   output_signal = filter(b, a, noisyMusic);
+
 
 
 
